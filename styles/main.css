@@ -1,0 +1,9 @@
+.form-group{
+    margin-bottom: 20px; /*(1)Таблица стилей появилась после шага 11*/
+}
+
+.form-label{ /* (2) Для оформления подписи к text-area*/
+    display: block; /*Отображается в виде блоков*/
+    font-weight: bold;
+    margin-bottom: 10px;
+}
