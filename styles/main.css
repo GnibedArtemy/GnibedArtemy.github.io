@@ -1,9 +1,43 @@
-.form-group{
-    margin-bottom: 20px; /*(1)Таблица стилей появилась после шага 11*/
+h1{
+    text-align: center; /*(3)*/
 }
 
-.form-label{ /* (2) Для оформления подписи к text-area*/
+.form-group{
+    margin-bottom: 10px; /*(1)*/
+}
+
+.form-label{ /* (2) */
     display: block; /*Отображается в виде блоков*/
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
+
+.container{ /*(4)*/    
+    font-size: 25px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+input, textarea, select{
+    font-size: inherit; /*(5)*/
+}
+
+.btn{ /*(6) Для кнопок*/
+    display: block;
+    height: 40px;
+    width: 150px;
+    margin: 0 auto;
+    background-color: rgb(63, 66, 255);
+    border: 1px solid(17,227,255);
+    border-radius: 5px; /*Скругление углов*/
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+/*  (1)Таблица стилей появилась после шага 11
+    (2)Для оформления подписи к text-area
+    (3)Заголовок по центру
+    (4)Центрирование контейнера
+    (5)Принудительное наследование шрифта
+*/

@@ -9,21 +9,22 @@
 <body>
     <h1>Форма обратной связи</h1> <!--(1)-->
     <div class="container"> <!--(2)-->
-        <form action="https://www.httpbin.org/post/" method="post" enctype="multipart/form-data"> <!--(3) action - куда мы будем отправлять данные формы (7) method (26) enctype="multipart/form-data" для корректной отправки файлов (MIME)-->
+        <form action="https://www.httpbin.org/post/" method="post" enctype="multipart/form-data"> <!--(3)(7)(26)-->
+            <input type="hidden" name="user_id" value="6"> <!--(29)-->
             
-            <div class="form-group"> <!--(11) группировка, чтобы в отдельных окнах-->
-                <label class="form-label" for="name">ФИО</label> <!--(5) Ввод подписи к полю формы (21) Класс form-label-->
-                <input id="name" type="text" name="name" value="Иванов Иван Иванович" required> <!--(4) Ввод текста (8) name="name" указывает, как будет называться отправляемый параметр, который будет отправлен в запросе (10) required обязательное поле (18) Value - значение по умолчанию-->
+            <div class="form-group"> <!--(11)-->
+                <label class="form-label" for="name">ФИО</label> <!--(5)(21)-->
+                <input id="name" type="text" name="name" value="Иванов Иван Иванович" required> <!--(4)(8)(10)(18)-->
             </div>
             
             <div class="form-group"> <!--(11)-->
-                <label class="form-label" for="name">Email</label> <!--(9)(21) Класс form-label-->
-                <input id="email" type="temail" name="email" placeholder="Введите e-mail"> <!--(9) Поле для email (17) placeholder - подсказка-->
+                <label class="form-label" for="name">Email</label> <!--(9)(21)-->
+                <input id="email" type="temail" name="email" placeholder="Введите e-mail"> <!--(9)(17)-->
             </div>
 
-            <div class="form-group"> <!--(16) поместили в отдельный блок div class="form-group"-->
-                <p class="form-label">Как вы узнали о нас?</p> <!--(12) (21) Класс form-label-->
-                <input type="radio" name="source" id="advertising" value="advertising" checked> <!--(12) радиокнопки (14) Атрибут value - его значение будет отправляться на сервер, если пользователь выберет этот пункт (19) - Атрибут checked - пудет подствечиваться радиокнопка по умолчанию-->
+            <div class="form-group"> <!--(16)-->
+                <p class="form-label">Как вы узнали о нас?</p> <!--(12)(21)-->
+                <input type="radio" name="source" id="advertising" value="advertising" checked> <!--(12)(14)(19)-->
                 <label for="advertising">Реклама в интернете</label> <!--(13)-->
                 <input type="radio" name="source" id="frienfd" value="frienfd"> <!--(15)-->
                 <label for="frienfd">Рассказали знакомые</label> <!--(15)-->
@@ -31,32 +32,58 @@
 
             <div class="form-group">
                 <label class="form-label" for="category">Категория обращения</label>
-                <select name="category" id="category"> <!--(22) Селекторы для выбора нескольких значений-->
-                    <option value="proposal">Предложение</option> <!--(23) Варианты выбора-->
-                    <option value="grievan">Жалоба</option> <!--(23) Варианты выбора-->
+                <select name="category" id="category"> <!--(22)-->
+                    <option value="proposal">Предложение</option> <!--(23)-->
+                    <option value="grievan">Жалоба</option> <!--(23)-->
                 </select> 
             </div>
             
             <div class="form-group"> <!--(20)-->
-                <label class="form-label" for="message">Текст сообщения</label> <!--(21) Класс form-label-->
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Введите сообщение">Текст по умолчанию</textarea> <!--(20) Для ввода большого текста-->
+                <label class="form-label" for="message">Текст сообщения</label> <!--(21)-->
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Введите сообщение">Текст по умолчанию</textarea> <!--(20)-->
             </div>
 
             <div class="form-group">
-                <label class="form-label" for="attachment">Вложение</label> <!--(25) Для прикрепления файла-->
+                <label class="form-label" for="attachment">Вложение</label> <!--(25)-->
                 <input type="file" name="attachment" id="attachment">
             </div>
             
             <div class="form-group">
-                <input type="checkbox" name="agreement" id="agreement" value="yes"> <!--(24) Чтобы пользователь поставил галочу-->
+                <input type="checkbox" name="agreement" id="agreement" value="yes"> <!--(24)-->
                 <label for="agreement">Даю согласие на обрабутку персональных данных</label> <!--(24)-->
             </div>
-            
-            
-            
-
-            <input type="submit" value="Отправить"> <!--(6) Кнопка отправить-->
+            <input class="btn" type="submit" value="Отправить"> <!--(6)(30)-->
         </form>
     </div>
 </body>
 </html>
+
+ <!--(1) Заголовок h1
+     (2) div-контейнер для оформления блока с формой
+     (3) action - куда мы будем отправлять данные формы
+     (4) Ввод текста
+     (5) Ввод подписи к полю формы
+     (6) Кнопка отправить
+     (7) method
+     (8) name="name" указывает, как будет называться отправляемый параметр, который будет отправлен в запросе
+     (9) Поле для email
+     (10) required обязательное поле
+     (11) группировка, чтобы в отдельных окнах
+     (12) радиокнопки
+     (14) Атрибут value - его значение будет отправляться на сервер, если пользователь выберет этот пункт 
+     (16) поместили в отдельный блок div class="form-group"
+     (17) placeholder - подсказка
+     (18) Value - значение по умолчанию
+     (19) - Атрибут checked - пудет подствечиваться радиокнопка по умолчанию
+     (20) Для ввода большого текста
+     (21) Класс form-label
+     (22) Селекторы для выбора нескольких значений
+     (23) Варианты выбора
+     (24) Чтобы пользователь поставил галочу
+     (25) Для прикрепления файла
+     (26) enctype="multipart/form-data" для корректной отправки файлов (MIME)
+     (27) Атрибут readonly - поле толькео для чтения, пользователю запрещено вносить изменения (данные отправляются)
+     (28) Атрибут Disabled - отключает поле совсем (данные не отправляются)
+     (29) Скрытое поле, предназначено для передачи служебной информации (идентификатор пользователя)
+     (30) Класс btn для оформления как кнопки
+    -->
