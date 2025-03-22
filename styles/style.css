@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Roboto-Bold";
+    font-style: normal;
+    font-weight: bold;
+    src: url("/fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+
+:root{
+    font-size: 62.5%;
+    --white: white;
+    --blue: #3805F2;
+    --dark-gray: #131313;
+    --black: black;
+    --gray: #1E1E1E;
+}
+
