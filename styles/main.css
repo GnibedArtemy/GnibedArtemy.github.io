@@ -23,9 +23,9 @@
 :root {
     font-size: 62.5%;
     --color-text-primary: #FFFFFF;
-    --color-text-secondary: rgba(255, 255, 255, 36);
+    --color-text-secondary: rgba(255, 255, 255, 0.36);
     --color-bg-dark: #181B20;
-    --color-bg-section: rgba(255, 255, 255, 8);
+    --color-bg-section: rgba(255, 255, 255, 0.08);
     --color-grad-primary: #FFC657;
     --color-grad-secondary: #FFD977;
 
@@ -35,12 +35,62 @@
     --font-weight-bold: 700;
 }
 
-h1 {
-    color: var(--color-text-secondary);
-}
 
 body {
     background-color: var(--color-bg-dark);
     color: var(--color-text-primary);
     font-family: var(--font-family-base);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: -0.0256rem;
+}
+
+h1,
+h2 {
+    font-weight: var(--font-weight-bold);
+}
+
+h1 {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+    letter-spacing: -0.23rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+    letter-spacing: -0.1rem;
+}
+
+a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-weight: var(--font-weight-semibold);
+}
+
+a.btn {
+    background-color: var(--color-text-primary);
+    color: var(--color-bg-dark);
+}
+
+p {
+    color: var(--color-text-secondary);
+
+}
+
+p strong {
+    color: var(--color-text-primary);
+}
+
+.chart {}
+
+.chart-bar {
+    background-color: var(--color-bg-section);
+    border: 0.77px solid var(--color-bg-section);
+    margin: 10px;
+}
+
+.chart-bar-active {
+    background: linear-gradient(180deg, #FFC657 0%, #FFD977 100%);
 }
