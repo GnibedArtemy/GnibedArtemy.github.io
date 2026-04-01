@@ -68,6 +68,47 @@ header {
     padding: 10px 0;
 }
 
+/*Первоначально меню скрыто*/
+.menu {
+    display: none;
+    position: absolute;
+    background-color: var(--color-bg-dark);
+    font-size: 2rem;
+}
+
+.menu li {
+    border: 1px solid var(--color-bg-section);
+    padding: 20px;
+}
+
+
+/*Стилизация бургер-кнопки*/
+.burger {
+    cursor: pointer;
+    display: block;
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+}
+
+/*Настройка внешнего вида черточек*/
+.burger span {
+    display: block;
+    border: 1px solid var(--color-text-primary);
+    margin: 4px 0;
+    border-radius: 4px;
+}
+
+/*Показываем меню при нажатии*/
+input[type=checkbox]:checked~.menu {
+    display: inline-block;
+}
+
+/*Скрытие чекбокса*/
+#toogle {
+    display: none;
+}
+
 h1,
 h2 {
     font-weight: var(--font-weight-bold);
@@ -130,4 +171,9 @@ p strong {
 
 .chart-bar-active {
     background: linear-gradient(180deg, #FFC657 0%, #FFD977 100%);
+}
+
+/*Настройка ширины изображения*/
+img.energy {
+    width: 50%;
 }

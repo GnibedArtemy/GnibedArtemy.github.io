@@ -14,14 +14,18 @@
         <!--wrapper - обертка для ограничения по ширине и центрирования-->
         <div class="wrapper">
             <a href="index.html">
-                <img src="#" alt="Логотип Midas">
+                <img src="images/Logo.svg" alt="Логотип Midas">
             </a>
 
-            <button>
-                <img src="#" alt="">
-            </button>
+            <!--Интерактивное бургер-меню-->
+            <label class="burger" for="toogle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <input type="checkbox" id="toogle">
 
-            <nav>
+            <nav class="menu">
                 <ul>
                     <li><a href="#">Platform</a></li>
                     <li><a href="#">Midas Coin</a></li>
@@ -59,7 +63,7 @@
                 </p>
             </section>
             <section id="payout">
-                <img src="#" alt="energy">
+                <img class="energy" src="images/energy.svg" alt="energy">
                 <h2>APY Boost</h2>
                 <p>10% of rewards earned by Midas platform community is used
                     <strong>to buyback MIDAS token</strong> from the open market
