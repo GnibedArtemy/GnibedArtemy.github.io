@@ -35,6 +35,16 @@
     --font-weight-bold: 700;
 }
 
+/*Способ расчета размеров элементов, который позволяет учитывать внутренние отступы и границы*/
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
 
 body {
     background-color: var(--color-bg-dark);
@@ -44,6 +54,14 @@ body {
     line-height: 2.4rem;
     font-weight: var(--font-weight-medium);
     letter-spacing: -0.0256rem;
+}
+
+
+/*Свойства обертки для ограничения по ширине содержимого сайта и для его центрирования*/
+.wrapper {
+    padding: 0 20px;
+    max-width: 1180px;
+    margin: 0 auto;
 }
 
 h1,
@@ -88,7 +106,6 @@ p strong {
 .chart-bar {
     background-color: var(--color-bg-section);
     border: 0.77px solid var(--color-bg-section);
-    margin: 10px;
 }
 
 .chart-bar-active {
