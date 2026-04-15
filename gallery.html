@@ -7,20 +7,26 @@
     <title>Галерея изображений</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/grid.css">
 </head>
 
 <body>
     <header>
-        <div class="wrapper">
+        <!--wrapper - обертка для ограничения по ширине и центрирования-->
+        <div class="wrapper wrapper-flex">
             <a href="index.html">
-                <img src="#" alt="Логотип Midas">
+                <img src="images/Logo.svg" alt="Логотип Midas">
             </a>
 
-            <button>
-                <img src="#" alt="">
-            </button>
+            <!--Интерактивное бургер-меню-->
+            <label class="burger" for="toogle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <input type="checkbox" id="toogle">
 
-            <nav>
+            <nav class="menu">
                 <ul>
                     <li><a href="#">Platform</a></li>
                     <li><a href="#">Midas Coin</a></li>
@@ -32,45 +38,45 @@
     <main>
         <div class="wrapper">
             <h1>Gallery</h1>
-            <ul>
+            <ul class="gallery">
                 <!-- Элемент галереи 1 -->
-                <li>
-                    <img src="#" alt="Подпись 1">
+                <li class="gallery-item">
+                    <img src="images/summer.jpg" alt="летний пейзаж">
                     <a href="#">Ссылка 1</a>
                 </li>
                 <!-- Элемент галереи 2 -->
-                <li>
-                    <img src="#" alt="Подпись 2">
+                <li class="gallery-item">
+                    <img src="images/summer.jpg" alt="Подпись 2">
                     <a href="#">Ссылка 1</a>
                 </li>
                 <!-- Элемент галереи 3 -->
-                <li>
-                    <img src="#" alt="Подпись 3">
+                <li class="gallery-item">
+                    <img src="images/summer.jpg" alt="Подпись 3">
                     <a href="#">Ссылка 1</a>
                 </li>
                 <!-- Элемент галереи 4 -->
-                <li>
-                    <img src="#" alt="Подпись 4">
+                <li class="gallery-item">
+                    <img src="images/summer.jpg" alt="Подпись 4">
                     <a href="#">Ссылка 1</a>
                 </li>
                 <!-- Элемент галереи 5 -->
-                <li>
-                    <img src="#" alt="Подпись 5">
+                <li class="gallery-item">
+                    <img src="images/summer.jpg" alt="Подпись 5">
                     <a href="#">Ссылка 1</a>
                 </li>
                 <!-- Элемент галереи 6 -->
-                <li>
-                    <img src="#" alt="Подпись 6">
+                <li class="gallery-item">
+                    <img src="images/summer.jpg" alt="Подпись 6">
                     <a href="#">Ссылка 1</a>
                 </li>
                 <!-- Элемент галереи 7 -->
-                <li>
-                    <img src="#" alt="Подпись 7">
+                <li class="gallery-item">
+                    <img src="images/summer.jpg" alt="Подпись 7">
                     <a href="#">Ссылка 1</a>
                 </li>
                 <!-- Элемент галереи 8 -->
-                <li>
-                    <img src="#" alt="Подпись 8">
+                <li class="gallery-item">
+                    <img src="images/summer.jpg" alt="Подпись 8">
                     <a href="#">Ссылка 1</a>
                 </li>
             </ul>
@@ -78,8 +84,9 @@
     </main>
     <footer>
         <div class="wrapper">
-            <nav>
+            <nav class="footer-navigation">
                 <ul>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="form.html">Registraiton</a></li>
                     <li><a href="#utility">About</a></li>
