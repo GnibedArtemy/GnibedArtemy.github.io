@@ -47,6 +47,12 @@ html {
 }
 
 body {
+    /*Данные ссвойства необходимы для "прибивания футера к низу страницы*/
+    display: flex;
+    flex-direction: column;
+    /*vh - 1% от высоты вьюпорта*/
+    height: 100vh;
+    /*Свойства внешнего вида*/
     background-color: var(--color-bg-dark);
     color: var(--color-text-primary);
     font-family: var(--font-family-base);
@@ -66,6 +72,12 @@ body {
 
 header {
     padding: 10px 0;
+    border-bottom: 0.4rem solid var(--color-bg-section);
+    background-color: var(--color-bg-dark);
+    /*Для "приклеивания" хедера к верху страницы*/
+    position: sticky;
+    top: 0;
+    z-index: 50;
 }
 
 /*Первоначально меню скрыто*/
@@ -74,6 +86,9 @@ header {
     position: absolute;
     background-color: var(--color-bg-dark);
     font-size: 2rem;
+    width: 85vw;
+    top: 4rem;
+    z-index: 100;
 }
 
 .menu li {
@@ -109,6 +124,11 @@ input[type=checkbox]:checked~.menu {
     display: none;
 }
 
+.wrapper-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
 h1,
 h2 {
     font-weight: var(--font-weight-bold);
@@ -118,14 +138,14 @@ h1 {
     font-size: 4.8rem;
     line-height: 4.8rem;
     letter-spacing: -0.23rem;
-    margin: 40px 0;
+    padding: 40px 0;
 }
 
 h2 {
     font-size: 3.2rem;
     line-height: 3.2rem;
     letter-spacing: -0.1rem;
-    margin: 24px 0;
+    padding: 24px 0;
 }
 
 a {
@@ -156,24 +176,79 @@ p strong {
 }
 
 .chart {
+    display: flex;
+    flex-wrap: wrap;
     margin: 24px 0;
-    max-width: 202px;
-    min-height: 112px;
+    gap: 0.8rem;
 }
 
+
 .chart-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    min-height: 10rem;
+    min-width: 3.5rem;
     background-color: var(--color-bg-section);
     border: 0.77px solid var(--color-bg-section);
-    border-radius: 10px;
+    border-radius: 9px;
     padding: 7px;
     text-align: center;
+}
+
+.chart-bar p {
+    color: var(--color-text-primary);
+    font-size: 0.77rem;
+    line-height: 0.77rem;
 }
 
 .chart-bar-active {
     background: linear-gradient(180deg, #FFC657 0%, #FFD977 100%);
 }
 
+
+/*Использование псевдокласса nth-child() и свойства transform: translateY() для
+расположения элементов календаря "лесенкой"
+*/
+.chart-bar:nth-child(1) {
+    transform: translateY(0);
+}
+
+.chart-bar:nth-child(2) {
+    transform: translateY(-0.8rem);
+}
+
+.chart-bar:nth-child(3) {
+    transform: translateY(-1.6rem);
+}
+
+.chart-bar:nth-child(4) {
+    transform: translateY(-2.4rem);
+}
+
+.chart-bar:nth-child(5) {
+    transform: translateY(-3.2rem);
+}
+
+
 /*Настройка ширины изображения*/
 img.energy {
     width: 50%;
+}
+
+footer {
+    /*Автоматический подбор расстояния сверху при изменении высоты экрана (прибить футер*/
+    margin-top: auto;
+}
+
+.footer-navigation {
+    min-height: 50px;
+}
+
+
+.footer-navigation ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
